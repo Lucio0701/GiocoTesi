@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ProgettoTesi
+    username: postgres
+    password: Luciano01
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    database: POSTGRESQL
+  application:
+    name: ProgettoTesi
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+
+server:
+  port: 8081
+debug: true
+my:
+  app:
+    jwtSecret: MySecretKey
+    jwtExpirationMs: 900000
+
