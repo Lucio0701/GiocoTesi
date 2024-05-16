@@ -64,17 +64,18 @@ public class Team {
         }
 
         public Team build() {
-            return new Team(this);
+            Team t=new Team();
+            t.id = this.id;
+            t.name = this.name;
+            t.ip = this.ip;
+            t.token = this.token;
+            t.nop_team = this.nop_team;
+            return t;
         }
     }
 
-    private Team(Builder builder) {
-        this.id = builder.id;
-        this.name = builder.name;
-        this.ip = builder.ip;
-        this.token = builder.token;
-        this.nop_team = builder.nop_team;
-    }
     public Team() {
+
     }
+
 }
