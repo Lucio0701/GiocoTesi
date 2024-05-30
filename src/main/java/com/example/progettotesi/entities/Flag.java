@@ -82,19 +82,18 @@ public class Flag {
         }
 
         public Flag build() {
-            return new Flag(this);
+            Flag f=new Flag();
+            f.id = this.id;
+            f.flag = this.flag;
+            f.service = this.service;
+            f.num_flag = this.num_flag;
+            f.protection_team = this.protection_team;
+            f.round = this.round;
+            f.weight = this.weight;
+            return f;
         }
     }
 
-    private Flag(Builder builder) {
-        this.id = builder.id;
-        this.flag = builder.flag;
-        this.service = builder.service;
-        this.num_flag = builder.num_flag;
-        this.protection_team = builder.protection_team;
-        this.round = builder.round;
-        this.weight = builder.weight;
-    }
     public Flag(){
 
     }

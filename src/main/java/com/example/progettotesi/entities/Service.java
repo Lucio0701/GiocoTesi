@@ -62,19 +62,18 @@ public class Service {
         }
 
         public Service build() {
-            return new Service(this);
+            Service s=new Service();
+            s.id=this.id;
+            s.port=this.port;
+            s.name=this.name;
+            s.auth_code=this.auth_code;
+            s.num_flag=this.num_flag;
+            return s;
         }
     }
 
-    private Service(Builder builder) {
-        this.id = builder.id;
-        this.name = builder.name;
-        this.port = builder.port;
-        this.auth_code = builder.auth_code;
-        this.num_flag = builder.num_flag;
-    }
-    public Service() {
-    }
+    private Service() {
 
+    }
 
 }

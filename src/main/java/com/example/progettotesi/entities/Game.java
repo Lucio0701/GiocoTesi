@@ -72,17 +72,15 @@ public class Game {
         }
 
         public Game build() {
-            return new Game(this);
+            Game g=new Game();
+            g.id = this.id;
+            g.valid_flag = this.valid_flag;
+            g.max_round = this.max_round;
+            g.round = this.round;
+            g.time_sleep_round = this.time_sleep_round;
+            g.time_sleep_tick = this.time_sleep_tick;
+            return g;
         }
-    }
-
-    private Game(Builder builder) {
-        this.id = builder.id;
-        this.valid_flag = builder.valid_flag;
-        this.max_round = builder.max_round;
-        this.round = builder.round;
-        this.time_sleep_round = builder.time_sleep_round;
-        this.time_sleep_tick = builder.time_sleep_tick;
     }
     public Game(){
 
